@@ -1,3 +1,8 @@
+/*
+ * A Lightning assignment for Mr. Rhinelander's APCSA class.
+ * Elias A., 29 October 2018
+*/
+
 int width = 800;
 int height = 500;
 int startX = 0;
