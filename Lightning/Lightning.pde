@@ -23,8 +23,8 @@ void draw() {
   if(isFirstIteration) flash(500);
   isFirstIteration = false;
   stroke(random(50)+206, random(50)+206, random(50)+206);   // [206,256), in the set of real numbers
-  endX = startX + int(random(1)*11);
-  endY = startY + int(random(1)*20-10);
+  endX = startX + int(random(1)*11);                        // [0,10], in the set of integers
+  endY = startY + int(random(1)*20-10);                     // [-10,9], in the set of integers
   line(startX, startY, endX, endY);
   startX = endX;
   startY = endY;
@@ -42,7 +42,6 @@ void flash(int rest) {
 
 void mouseClicked() {
   reset();
-  isFirstIteration = true;
   loop();
 }
 
@@ -52,4 +51,5 @@ void reset() {
   endX = 0;
   endY = 150;
   strokeWeight(random(4, 6));
+  isFirstIteration = true;
 }
